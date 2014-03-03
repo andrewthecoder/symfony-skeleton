@@ -44,7 +44,7 @@ php composer.phar install
 
 #### Create your app bundle
 ````
-php app/console generate:bundle --namespace={CAPITALISED VENDOR NAME}/Bundle/{CAPITALISED BUNDLE NAME}Bundle --format=yml
+php app/console generate:bundle --namespace={VENDOR NAME}/Bundle/{BUNDLE NAME}Bundle --format=yml
 ````
 
 http://symfony.com/doc/current/bundles/SensioGeneratorBundle/commands/generate_bundle.html
