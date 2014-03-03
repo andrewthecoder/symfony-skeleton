@@ -14,6 +14,12 @@ cd symfony-skeleton
 find . | grep .git | xargs rm -rf
 ````
 
+#### Install Composer, install/update Symfony
+````
+curl -sS https://getcomposer.org/installer | php
+php composer.phar install
+````
+
 #### Fix app/logs and app/cache permissions
 
 On linux web servers with sudo and setfacl, this means:
@@ -35,12 +41,6 @@ setfacl -dR -m u:"$APACHEUSER":rwX -m u:`whoami`:rwX app/cache app/logs
 ````
 
 If neither of these work (no setfacl, for example), there is a umask workaround [here](http://symfony.com/doc/current/book/installation.html).
-
-#### Install Composer, install/update Symfony and check everything is working ok
-````
-curl -sS https://getcomposer.org/installer | php
-php composer.phar install
-````
 
 #### Create your app bundle
 ````
