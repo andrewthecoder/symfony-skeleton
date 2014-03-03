@@ -36,6 +36,19 @@ setfacl -dR -m u:"$APACHEUSER":rwX -m u:`whoami`:rwX app/cache app/logs
 
 If neither of these work (no setfacl, for example), there is a umask workaround [here](http://symfony.com/doc/current/book/installation.html).
 
+#### Install Composer, install/update Symfony and check everything is working ok
+````
+curl -sS https://getcomposer.org/installer | php
+php composer.phar install
+````
+
+#### Create your app bundle
+````
+php app/console generate:bundle --namespace={CAPITALISED VENDOR NAME}/Bundle/{CAPITALISED BUNDLE NAME}Bundle --format=yml
+````
+
+http://symfony.com/doc/current/bundles/SensioGeneratorBundle/commands/generate_bundle.html
+
 #### Initialise your new Github repository with this code
 ````
 git init
@@ -47,13 +60,6 @@ git push origin master
 
 http://symfony.com/doc/current/cookbook/workflow/new_project_git.html
 https://help.github.com/articles/create-a-repo
-
-#### Create your app bundle
-````
-php app/console generate:bundle --namespace={CAPITALISED VENDOR NAME}/Bundle/{CAPITALISED BUNDLE NAME}Bundle --format=yml
-````
-
-http://symfony.com/doc/current/bundles/SensioGeneratorBundle/commands/generate_bundle.html
 
 #### Create pages
 
