@@ -26,6 +26,11 @@ On other linux systems with setfacl, find out what the apache user is and put it
 Second, set up your Git repository correctly:
 http://symfony.com/doc/current/cookbook/workflow/new_project_git.html
 
-Then, create bundles and pages:
-http://symfony.com/doc/current/book/page_creation.html
+Third, create a bundle:
+ php app/console generate:bundle --namespace=AB/Bundle/TestBundle --format=yml
+
 http://symfony.com/doc/current/bundles/SensioGeneratorBundle/commands/generate_bundle.html
+
+Finally, create pages:
+http://symfony.com/doc/current/book/page_creation.html
+
