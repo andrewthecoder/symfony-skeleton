@@ -3,12 +3,12 @@ parameters:
     database_driver: pdo_mysql
     database_host: 127.0.0.1
     database_port: null
-    database_name: research
-    database_user: andrew
-    database_password: Cheesygit182!
+    database_name: databaseName
+    database_user: databaseUser
+    database_password: databasePassword
     mailer_transport: smtp
     mailer_host: 127.0.0.1
     mailer_user: null
     mailer_password: null
     locale: en
-    secret: TestingParallelProgrammingWithSymfony
+    secret: ThisIsClearlyNotAGeneratedSecretKey

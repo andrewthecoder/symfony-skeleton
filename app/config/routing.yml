@@ -1,8 +1,0 @@
-ab_test:
-    resource: "@ABTestBundle/Resources/config/routing.yml"
-    prefix:   /
-
-
-_welcome:
-    path:  /
-    defaults: { _controller: CreateThisBundle:CreateThisController:index }

@@ -7,7 +7,14 @@ Perfect for cloning in an environment, updating with Composer and getting starte
 Getting started with this Symfony Skeleton:
 -------------------------------
 
-#### Fix app/logs and app/cache permissions 
+#### Download the source, clean up references to this git repository
+````
+git clone git@github.com:andrewthecoder/symfony-skeleton.git
+cd symfony-skeleton
+find . | grep .git | xargs rm -rf
+````
+
+#### Fix app/logs and app/cache permissions
 
 On linux web servers with sudo and setfacl, this means:
 ````
@@ -29,13 +36,21 @@ setfacl -dR -m u:"$APACHEUSER":rwX -m u:`whoami`:rwX app/cache app/logs
 
 If neither of these work (no setfacl, for example), there is a umask workaround [here](http://symfony.com/doc/current/book/installation.html).
 
-#### Set up your Git repository correctly
+#### Initialise your new Github repository with this code
+````
+git init
+git add .
+git commit -m 'initial commit, including symfony2 skeleton'
+git remote add origin git@github.com:{USERNAME}/{REPOSITORY}
+git push origin master
+````
 
 http://symfony.com/doc/current/cookbook/workflow/new_project_git.html
+https://help.github.com/articles/create-a-repo
 
-#### Create a bundle
+#### Create your app bundle
 ````
-php app/console generate:bundle --namespace=AB/Bundle/TestBundle --format=yml
+php app/console generate:bundle --namespace={CAPITALISED VENDOR NAME}/Bundle/{CAPITALISED BUNDLE NAME}Bundle --format=yml
 ````
 
 http://symfony.com/doc/current/bundles/SensioGeneratorBundle/commands/generate_bundle.html
