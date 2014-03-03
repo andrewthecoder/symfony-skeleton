@@ -29,13 +29,13 @@ setfacl -dR -m u:"$APACHEUSER":rwX -m u:`whoami`:rwX app/cache app/logs
 
 If neither of these work (no setfacl, for example), there is a umask workaround [here](http://symfony.com/doc/current/book/installation.html).
 
-#### Set up your Git(hub?) repository correctly
+#### Set up your Git repository correctly
 
 http://symfony.com/doc/current/cookbook/workflow/new_project_git.html
 
-##### Create a bundle
+#### Create a bundle
 ````
-    php app/console generate:bundle --namespace=AB/Bundle/TestBundle --format=yml
+php app/console generate:bundle --namespace=AB/Bundle/TestBundle --format=yml
 ````
 
 http://symfony.com/doc/current/bundles/SensioGeneratorBundle/commands/generate_bundle.html
