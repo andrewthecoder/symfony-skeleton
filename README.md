@@ -49,6 +49,13 @@ php app/console generate:bundle --namespace={VENDOR NAME}/Bundle/{BUNDLE NAME}Bu
 
 http://symfony.com/doc/current/bundles/SensioGeneratorBundle/commands/generate_bundle.html
 
+#### Create entities
+````
+php app/console doctrine:generate:entity
+````
+
+http://symfony.com/doc/current/book/doctrine.html
+
 #### Initialise your new Github repository with this code
 ````
 git init
