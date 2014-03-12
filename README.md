@@ -49,6 +49,11 @@ php app/console generate:bundle --namespace={VENDOR NAME}/Bundle/{BUNDLE NAME}Bu
 
 http://symfony.com/doc/current/bundles/SensioGeneratorBundle/commands/generate_bundle.html
 
+#### Edit database connection parameters
+````
+nano app/config/parameters.yml
+````
+
 #### Create database, generate entities and update database schema
 ````
 php app/console doctrine:database:create
